@@ -19,6 +19,7 @@ public class JomoTrackzillaAppApplication {
 		System.out.println("######JomoTrackzillaAppApplication is UP and RUNNING#####");
 	}
 
+	/*
 	@Bean
 	public CommandLineRunner demo(ApplicationRepository repository) {
 		return (args) -> {
@@ -34,5 +35,5 @@ public class JomoTrackzillaAppApplication {
 				log.info("The application is: " + application.toString());
 			}
 		};
-	}
+	}*/
 }
