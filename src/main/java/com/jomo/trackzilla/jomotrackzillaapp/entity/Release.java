@@ -9,15 +9,14 @@ import javax.persistence.Id;
 public class Release {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private long id;
     private String releaseDate;
     private String description;
 
     public Release() {
     }
 
-    public Release(Integer id, String releaseDate, String description) {
-        this.id = id;
+    public Release( String releaseDate, String description) {
         this.releaseDate = releaseDate;
         this.description = description;
     }
@@ -31,11 +30,11 @@ public class Release {
                 '}';
     }
 
-    public Integer getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(long id) {
         this.id = id;
     }
 

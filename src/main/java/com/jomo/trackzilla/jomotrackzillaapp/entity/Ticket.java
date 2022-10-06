@@ -7,10 +7,10 @@ public class Ticket {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name="ticket_id")
-    private Integer id;
+    private long id;
 
     @Column(name="ticket_number")
-    private Integer number;
+    private long number;
 
     @Column(name="ticket_name")
     private String name;
@@ -51,19 +51,19 @@ public class Ticket {
     @JoinTable(name ="ticket_release", joinColumns = @JoinColumn(name = "ticket_fk"), inverseJoinColumns = @JoinColumn(name = "release_fk"))
     private Release release;
 
-    public Integer getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(long id) {
         this.id = id;
     }
 
-    public Integer getNumber() {
+    public long getNumber() {
         return number;
     }
 
-    public void setNumber(Integer number) {
+    public void setNumber(long number) {
         this.number = number;
     }
 
@@ -86,9 +86,7 @@ public class Ticket {
     public Ticket() {
     }
 
-    public Ticket(Integer id, Integer number, String name, String description) {
-        this.id = id;
-        this.number = number;
+    public Ticket(String name, String description) {
         this.name = name;
         this.description = description;
     }

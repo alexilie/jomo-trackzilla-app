@@ -7,7 +7,7 @@ public class Owner {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name="owner_id")
-    private Integer id;
+    private long id;
 
     @Column(name = "owner_name", nullable = false)
     private String name;
@@ -18,8 +18,7 @@ public class Owner {
     public Owner() {
     }
 
-    public Owner(Integer id, String name, String type) {
-        this.id = id;
+    public Owner(String name, String type) {
         this.name = name;
         this.type = type;
     }
@@ -33,11 +32,11 @@ public class Owner {
                 '}';
     }
 
-    public Integer getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(long id) {
         this.id = id;
     }
 
