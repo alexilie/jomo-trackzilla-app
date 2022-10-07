@@ -9,10 +9,10 @@ public class Application {
     @Column(name="application_id")
     private long id;
 
-    @Column(name = "app_name", nullable = false)
+    @Column(name = "application_name", nullable = false)
     private String name;
 
-    @Column(name = "app_type")
+    @Column(name = "application_type")
     private String type;
 
     @Column(length = 2000)
@@ -43,7 +43,6 @@ public class Application {
     public long getId() {
         return id;
     }
-
     public void setId(long id) {
         this.id = id;
     }
@@ -51,7 +50,6 @@ public class Application {
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
@@ -59,7 +57,6 @@ public class Application {
     public String getType() {
         return type;
     }
-
     public void setType(String type) {
         this.type = type;
     }
@@ -67,7 +64,6 @@ public class Application {
     public String getOwner() {
         return owner;
     }
-
     public void setOwner(String owner) {
         this.owner = owner;
     }
@@ -75,7 +71,6 @@ public class Application {
     public String getDescription() {
         return description;
     }
-
     public void setDescription(String description) {
         this.description = description;
     }

@@ -10,13 +10,15 @@ public class Release {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+    private String name;
     private String releaseDate;
     private String description;
 
     public Release() {
     }
 
-    public Release( String releaseDate, String description) {
+    public Release( String name, String releaseDate, String description) {
+        this.name = name;
         this.releaseDate = releaseDate;
         this.description = description;
     }
@@ -25,6 +27,7 @@ public class Release {
     public String toString() {
         return "Release{" +
                 "id=" + id +
+                ", name='" + name + '\'' +
                 ", releaseDate='" + releaseDate + '\'' +
                 ", description='" + description + '\'' +
                 '}';
@@ -33,15 +36,16 @@ public class Release {
     public long getId() {
         return id;
     }
-
     public void setId(long id) {
         this.id = id;
     }
 
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+
     public String getReleaseDate() {
         return releaseDate;
     }
-
     public void setReleaseDate(String releaseDate) {
         this.releaseDate = releaseDate;
     }
@@ -49,7 +53,6 @@ public class Release {
     public String getDescription() {
         return description;
     }
-
     public void setDescription(String description) {
         this.description = description;
     }
